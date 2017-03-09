@@ -14,6 +14,9 @@ class Courier {
 	// sends the parcel to its destination
 	return true;
 	}
+	
+	function setName($name) {
+	$this->name = $name;
+	}
 }
 
-	
