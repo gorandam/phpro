@@ -11,6 +11,3 @@ $dono =  new Courier('Douspace Delivery');
 var_dump($mono);
 var_dump($dono);
 
-echo 'Courier name: ' . $mono->name;
-
-$mono->ship($parcel);
