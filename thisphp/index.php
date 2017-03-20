@@ -31,12 +31,19 @@ $c->showData();
 $a = new Cow("Elsie Mae Mae");
 echo $a->getName();
 
-*/
 
 $a = new Cow('Elsie Mae Mae');
 echo $a->speak();
 $b = new Animal('something');
 echo $b->speak();
 
+*/
+
+function Name(Animal $a) {
+	echo $a->getName();
+}
+
+$b = new Cow('Milka');
+Name($b);
 
 
