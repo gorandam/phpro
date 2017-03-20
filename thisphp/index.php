@@ -4,6 +4,7 @@ function __autoload($classname) {
 include strtolower($classname) . '.php';
 }
 
+/*
 $mindi = new Person();
 $billy = new Person();
 
@@ -24,3 +25,18 @@ var_dump($billy);
 
 $c = new Employee();
 $c->showData();
+
+
+
+$a = new Cow("Elsie Mae Mae");
+echo $a->getName();
+
+*/
+
+$a = new Cow('Elsie Mae Mae');
+echo $a->speak();
+$b = new Animal('something');
+echo $b->speak();
+
+
+
