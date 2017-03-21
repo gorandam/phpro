@@ -3,7 +3,7 @@
 
 class PigeonPost extends Courier {
 
-	public function ship($parcel) {
+	public function ship(Parcel $parcel) {
 		// fetch pigeon
 		// attach parces
 		// send
