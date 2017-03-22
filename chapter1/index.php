@@ -25,9 +25,6 @@ if($courier instanceOf PigeonPost) {
 	echo $courier->name . " is a PigeonPost\n";
 }
 
-*/
-
-
 
 
 $box1 = new Parcel();
@@ -48,3 +45,11 @@ if ($box1 == $box2) {
 if ($box1 === $box2) {
 	echo 'exact same object \n';
 }
+
+*/
+
+$myparcel = new Parcel();
+$myparcel->setWeight(5)->setCountry('Peru');
+
+
+
