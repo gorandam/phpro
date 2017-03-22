@@ -54,8 +54,33 @@ class Post{
 	
 }
 
-$post = new Post;
-$post->name = 'Testing';
-echo $post->name;
-var_dump(isset($post->name));
+//$post = new Post;
+//$post->name = 'Testing';
+//echo $post->name;
+//var_dump(isset($post->name));
 
+class First {
+	public $id= 23;
+	private $name = 'John Doe';
+	
+	public function saySomething($word) {
+		echo $word;
+	}
+	
+}
+
+
+class Second extends First {
+	public function getName(){
+		echo $this->name;
+	}
+	
+}
+
+$second = new Second;
+
+//echo $second->name;
+
+// echo $second->saySomething('Hello');
+
+ $second->getName();
