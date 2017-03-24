@@ -37,7 +37,7 @@ echo $a->speak();
 $b = new Animal('something');
 echo $b->speak();
 
-*/
+
 
 function Name(Animal $a) {
 	echo $a->getName();
@@ -45,5 +45,20 @@ function Name(Animal $a) {
 
 $b = new Cow('Milka');
 Name($b);
+
+*/
+
+	// example of usage of 'User' class with property overloading
+
+
+
+$user = new User();
+$user->firstname = 'Jane';
+$user->lastname = 'Doe';
+$user->email = 'janedoe@mydomain.com';
+$user->address = 'My address 1111';
+// display user data 
+
+echo 'First Name: ' . $user->firstname . ' <br>Last Name: ' . $user->lastname . '<BR> Email: ' . $user->email . '<BR>Address: ' . $user->address;
 
 
