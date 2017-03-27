@@ -46,7 +46,7 @@ function Name(Animal $a) {
 $b = new Cow('Milka');
 Name($b);
 
-*/
+
 
 	// example of usage of 'User' class with property overloading
 
@@ -61,4 +61,11 @@ $user->address = 'My address 1111';
 
 echo 'First Name: ' . $user->firstname . ' <br>Last Name: ' . $user->lastname . '<BR> Email: ' . $user->email . '<BR>Address: ' . $user->address;
 
+*/
 
+
+$e = new Employee();
+$e->setFirstName("Marsha");
+$e->setBirthDate("09-12-1983");
+$data = serialize($e)."\n";
+echo $data."\n";
