@@ -61,7 +61,7 @@ $user->address = 'My address 1111';
 
 echo 'First Name: ' . $user->firstname . ' <br>Last Name: ' . $user->lastname . '<BR> Email: ' . $user->email . '<BR>Address: ' . $user->address;
 
-*/
+
 
 
 $e = new Employee();
@@ -70,3 +70,22 @@ $e->setBirthDate("09-12-1983");
 $data = serialize($e)."\n";
 echo $data."\n";
 var_dump(unserialize($data));
+
+*/
+
+
+
+
+
+
+
+
+
+$first = new CopyClass();
+$first->name = "Number 1";
+$second = clone $first;
+echo "first = " .$first->name . "<br><br>";
+
+$second->name = "Number 2";
+echo "first = " . $first->name . "<br>";
+echo "second = " . $second->name . "<br>";
