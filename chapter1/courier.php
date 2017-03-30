@@ -1,7 +1,7 @@
 <?php
 
-class Courier {
-
+class Courier implements Countable {
+    /*
  	public $name;
 	public $home_country;
 	
@@ -23,12 +23,23 @@ class Courier {
 			$cost = $rate * $parcel->weight;
 		return $cost;
 	}
-	*/
+	
 	public function __toString() {
 		return $this->name . '(' . $this->home_country . ')';
 		
 	}
-	
+	*/
+		
+ protected $count = 0;
+ public function ship(Parcel $parcel) {
+	$this->count++;
+	// ship parcel
+	return true;
+ }
+ public function count() {
+	 return $this->count;
+ }
+
 }
 
 

@@ -51,9 +51,18 @@ if ($box1 === $box2) {
 $myparcel = new Parcel();
 $myparcel->setWeight(5)->setCountry('Peru');
 
-*/
+
 
 $mycourier = new Courier('Avian Services', 'Australia');
 echo $mycourier;
 // var_dump($mycourier);
+
+*/
+
+$courier = new Courier();
+$courier->ship(new Parcel());
+$courier->ship(new Parcel());
+$courier->ship(new Parcel());
+echo count($courier);
+
 
