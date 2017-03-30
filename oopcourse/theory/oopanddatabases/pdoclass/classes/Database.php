@@ -50,8 +50,13 @@ class Database {
 		}
 		$this->stmt->bindValue($param, $value, $type);			
 	}
+	
 	public function execute(){ // method to execute query with supplied value
 		return $this->stmt->execute();
+	}
+	
+	public function lastInsertId(){
+		$this->pdo->lastInsertId();
 	}
 	
 	public function resultset(){ // method to handle result set-return associative array
