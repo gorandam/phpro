@@ -148,7 +148,7 @@ echo "<br><br>";
 
 // Code to change the title by changing static $title variable in the DinnerMenu class.
 
-DinnerMenu::$title="<h2><em>Dinner</em></h2>";
+DinnerMenu::$title="<h2><em>Dinner</em></h2>";// Code to change value of static property-a
 echo DinnerMenu::$title;
 echo $tmpMenuItem->getItemName() . ' - $ ' . $tmpDinnerMenu->setDinnerPrices($tmpMenuItem);
 echo "<br><br>";
