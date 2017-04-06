@@ -71,15 +71,6 @@ $data = serialize($e)."\n";
 echo $data."\n";
 var_dump(unserialize($data));
 
-*/
-
-
-
-
-
-
-
-
 
 $first = new CopyClass();
 $first->name = "Number 1";
@@ -89,3 +80,8 @@ echo "first = " .$first->name . "<br><br>";
 $second->name = "Number 2";
 echo "first = " . $first->name . "<br>";
 echo "second = " . $second->name . "<br>";
+
+*/
+
+$singleton = SingletonClass::init();
+var_dump($singleton);
