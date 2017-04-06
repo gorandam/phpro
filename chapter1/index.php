@@ -57,12 +57,23 @@ $mycourier = new Courier('Avian Services', 'Australia');
 echo $mycourier;
 // var_dump($mycourier);
 
-*/
+
 
 $courier = new Courier();
 $courier->ship(new Parcel());
 $courier->ship(new Parcel());
 $courier->ship(new Parcel());
 echo count($courier);
+*/
+
+try{
+	$pdo = new PDO('mysql:host=nonsense');
+	echo 'Conected to the database';
+} catch (PDOException $e) {
+	echo 'Oops!' . $e->getMessage();
+	exit();
+	
+}
+
 
 
