@@ -24,6 +24,7 @@ class Database {
 		} catch(PDOException $e) {
 			$this->error = 'Error conecting to the database'. $e->getMessage();
 			echo $e->getMessage();
+			exit();
 			
 		}
 	}
@@ -35,7 +36,7 @@ class Database {
 	public function bind($param, $value, $type = null) { //method to send value to prepared statement
 		if (is_null($type)) {
 			switch(true){
-				case is_int($value): //We set how nind value goes to the database
+				case is_int($value): //We set how bind value goes to the database
 					$type = PDO::PARAM_INT;
 					break;
 				case is_bool($value):
