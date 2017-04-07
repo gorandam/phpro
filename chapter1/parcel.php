@@ -3,9 +3,9 @@
 
 class Parcel {
 
-	protected $weight;
-	protected $destinationAddress;
-	protected $destionationCountry;
+	public $weight;
+	public $destinationAddress = "Vojvode Stepe";
+	public $destionationCountry;
 
 	public function setWeight($weight) {
 		echo "weight set to: " . $weight . "\n";
@@ -17,6 +17,8 @@ class Parcel {
 		$this->destinationCountry = $country;
 		return $this;
 	}
+	
+	
 }
 
 

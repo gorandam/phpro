@@ -6,11 +6,11 @@ include strtolower($classname) . '.php';
 }
 
 /*
-$mono = new Courier('Monospace Delivery');
-$dono =  new Courier('Douspace Delivery');
+$mono = new Courier();
+$dono =  new Courier();
 
 var_dump($mono);
-var_dump($dono);
+
 
 
 
@@ -64,16 +64,73 @@ $courier->ship(new Parcel());
 $courier->ship(new Parcel());
 $courier->ship(new Parcel());
 echo count($courier);
+
 */
 
-try{
-	$pdo = new PDO('mysql:host=nonsense');
-	echo 'Conected to the database';
-} catch (PDOException $e) {
-	echo 'Oops!' . $e->getMessage();
-	exit();
-	
+
+
+
+
+$myCourier = new Courier();
+$parcel = new Parcel();
+var_dump($myCourier);
+
+
+// add the address if we have it;
+//$parcel->destinationAddress = "Vojvode Stepe Street";
+var_dump($parcel->destinationAddress);
+$parcel->weight = rand(1, 7);
+var_dump($parcel->weight);
+
+
+
+try {
+	$myCourier->ship($parcel);
+	echo "parcel shipped";
+} catch(HeavyParcelException $e) {
+	echo "Parcel weight error: " . $e->getMessage();
+} catch (Exception $e) {
+	echo "Something went wrong. " . $e->getMessage();
+	exit;   // exit so we don't try to proceed any further
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
