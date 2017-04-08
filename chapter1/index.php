@@ -65,9 +65,6 @@ $courier->ship(new Parcel());
 $courier->ship(new Parcel());
 echo count($courier);
 
-*/
-
-
 
 
 
@@ -95,7 +92,20 @@ try {
 }
 
 
+*/
 
+
+function handleMissedException($e) {
+
+	echo "Sorry, something is wrong. Please try again, or contract us if the problem persists";
+	error_log('Unhandled Exception: ' . $e->getMessage() . ' in file ' . $e->getFile() . ' on line ' . $e->getLine()); //send message to the web server's error log or to a file.
+	
+
+}
+
+set_exception_handler('handleMissedException');
+
+throw new Exception('Just Testing');
 
 
 
