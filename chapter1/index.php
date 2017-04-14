@@ -92,7 +92,7 @@ try {
 }
 
 
-*/
+
 
 
 function handleMissedException($e) {
@@ -106,6 +106,29 @@ function handleMissedException($e) {
 set_exception_handler('handleMissedException');
 
 throw new Exception('Just Testing');
+
+
+*/
+
+
+
+
+class TestClass {
+    public $bar;
+}
+class Foo1 extends TestClass { }
+class Foo2 extends TestClass { }
+
+
+$fool1 = new Foo1();
+$fool2 = new Foo2();
+
+
+
+$fool1->bar = 'Hello';
+$fool2->bar = 'World';
+
+echo  $fool1->bar . ' ' . $fool2->bar; // Prints: World World
 
 
 
